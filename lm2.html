@@ -1,0 +1,4210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Fact Finder Research | Research, Data, Training & Clinical Research Solutions</title>
+
+  <meta name="description"
+        content="Fact Finder Research provides research, data, monitoring and evaluation, consultancy, technology, professional training and clinical research capacity-building solutions in Kenya, Africa and beyond.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+
+    :root {
+      --navy: #063b78;
+      --navy-dark: #03264f;
+      --navy-light: #0c4f96;
+
+      --green: #009b52;
+      --green-light: #16b968;
+      --green-soft: #e9f7ef;
+
+      --white: #ffffff;
+      --off-white: #f7fafc;
+      --grey: #687987;
+      --dark: #172b3a;
+      --border: #dce6ec;
+
+      --warning: #e99b16;
+      --danger: #d94c4c;
+      --success: #168b55;
+
+      --shadow: 0 20px 55px rgba(3, 38, 79, .11);
+
+      --container: 1180px;
+      --radius: 18px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "DM Sans", sans-serif;
+      color: var(--dark);
+      line-height: 1.7;
+      background: var(--white);
+    }
+
+    h1, h2, h3, h4 {
+      font-family: "Manrope", sans-serif;
+      line-height: 1.15;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      font-family: inherit;
+    }
+
+    .container {
+      width: min(var(--container), 92%);
+      margin: auto;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+
+      background: rgba(255,255,255,.96);
+      backdrop-filter: blur(15px);
+
+      border-bottom: 1px solid rgba(220,230,236,.75);
+    }
+
+    .nav {
+      height: 92px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .brand-logo {
+      width: 205px;
+      height: auto;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+
+      list-style: none;
+
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .nav-links a {
+      transition: .2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--green);
+    }
+
+    .nav-button {
+      padding: 12px 19px;
+      border-radius: 8px;
+
+      background: var(--green);
+      color: white !important;
+
+      transition: .2s ease;
+    }
+
+    .portal-nav-button {
+      padding: 12px 18px;
+      border-radius: 8px;
+
+      background: var(--navy);
+      color: white !important;
+
+      transition: .2s ease;
+    }
+
+    .portal-nav-button:hover {
+      background: var(--green);
+    }
+
+    .mobile-button {
+      display: none;
+
+      border: none;
+      background: none;
+
+      font-size: 28px;
+      color: var(--navy);
+
+      cursor: pointer;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      min-height: 820px;
+
+      padding: 185px 0 100px;
+
+      position: relative;
+      overflow: hidden;
+
+      background:
+        radial-gradient(
+          circle at 82% 25%,
+          rgba(0,155,82,.20),
+          transparent 27%
+        ),
+        radial-gradient(
+          circle at 10% 90%,
+          rgba(22,185,104,.10),
+          transparent 28%
+        ),
+        linear-gradient(
+          135deg,
+          var(--navy-dark),
+          var(--navy)
+        );
+
+      color: white;
+    }
+
+    .hero-grid {
+      position: absolute;
+      inset: 0;
+
+      opacity: .065;
+
+      background-image:
+        linear-gradient(
+          rgba(255,255,255,.7) 1px,
+          transparent 1px
+        ),
+        linear-gradient(
+          90deg,
+          rgba(255,255,255,.7) 1px,
+          transparent 1px
+        );
+
+      background-size: 55px 55px;
+
+      mask-image: linear-gradient(
+        to bottom,
+        black,
+        transparent
+      );
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+
+      max-width: 760px;
+    }
+
+    .hero-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+
+      padding: 8px 14px;
+
+      border: 1px solid rgba(255,255,255,.20);
+      border-radius: 30px;
+
+      background: rgba(255,255,255,.06);
+
+      font-size: 11px;
+      font-weight: 700;
+
+      text-transform: uppercase;
+      letter-spacing: 1.7px;
+
+      margin-bottom: 26px;
+    }
+
+    .hero-label::before {
+      content: "";
+
+      width: 8px;
+      height: 8px;
+
+      border-radius: 50%;
+
+      background: var(--green-light);
+    }
+
+    .hero h1 {
+      color: white;
+
+      font-size: clamp(45px, 7vw, 76px);
+
+      letter-spacing: -3.5px;
+    }
+
+    .hero h1 span {
+      color: #35c77b;
+    }
+
+    .hero-subtitle {
+      max-width: 680px;
+
+      margin: 30px 0 35px;
+
+      color: rgba(255,255,255,.75);
+
+      font-size: 18px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 13px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 14px 22px;
+
+      border-radius: 8px;
+
+      font-size: 14px;
+      font-weight: 700;
+
+      transition: .25s ease;
+
+      cursor: pointer;
+    }
+
+    .button:hover {
+      transform: translateY(-3px);
+    }
+
+    .button-primary {
+      background: white;
+      color: var(--navy);
+
+      box-shadow: 0 12px 30px rgba(0,0,0,.15);
+    }
+
+    .button-green {
+      background: var(--green);
+      color: white;
+    }
+
+    .button-outline {
+      border: 1px solid rgba(255,255,255,.25);
+      background: rgba(255,255,255,.06);
+      color: white;
+    }
+
+    /* =========================
+       HERO VISUAL
+    ========================= */
+
+    .hero-visual {
+      position: absolute;
+
+      right: 5%;
+      bottom: 80px;
+
+      width: 390px;
+      height: 390px;
+
+      z-index: 2;
+    }
+
+    .circle {
+      position: absolute;
+
+      border-radius: 50%;
+
+      border: 1px solid rgba(255,255,255,.12);
+    }
+
+    .circle.one { inset: 0; }
+    .circle.two { inset: 45px; }
+    .circle.three { inset: 90px; }
+
+    .africa-card {
+      position: absolute;
+
+      width: 205px;
+      height: 205px;
+
+      left: 92px;
+      top: 92px;
+
+      border-radius: 50%;
+
+      background: rgba(255,255,255,.07);
+
+      border: 1px solid rgba(255,255,255,.16);
+
+      display: flex;
+      flex-direction: column;
+
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
+
+      backdrop-filter: blur(8px);
+    }
+
+    .africa-card .symbol {
+      font-size: 58px;
+      margin-bottom: 8px;
+    }
+
+    .africa-card strong {
+      font-size: 13px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .africa-card span {
+      font-size: 11px;
+      color: rgba(255,255,255,.55);
+    }
+
+    .data-bars {
+      position: absolute;
+
+      bottom: 20px;
+      left: 20px;
+
+      display: flex;
+      align-items: end;
+
+      gap: 8px;
+
+      height: 100px;
+    }
+
+    .data-bars i {
+      display: block;
+
+      width: 13px;
+
+      border-radius: 4px 4px 0 0;
+
+      background: var(--green);
+    }
+
+    .data-bars i:nth-child(1) { height: 30%; }
+    .data-bars i:nth-child(2) { height: 48%; }
+    .data-bars i:nth-child(3) { height: 60%; }
+    .data-bars i:nth-child(4) { height: 80%; }
+    .data-bars i:nth-child(5) { height: 96%; }
+
+    /* =========================
+       GENERAL SECTIONS
+    ========================= */
+
+    section {
+      padding: 110px 0;
+    }
+
+    .intro {
+      background: white;
+    }
+
+    .intro-grid {
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 80px;
+
+      align-items: center;
+    }
+
+    .section-label {
+      margin-bottom: 14px;
+
+      color: var(--green);
+
+      font-size: 11px;
+      font-weight: 800;
+
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .intro h2 {
+      font-size: clamp(34px,5vw,52px);
+
+      letter-spacing: -2px;
+
+      color: var(--navy);
+
+      margin-bottom: 25px;
+    }
+
+    .intro p {
+      color: var(--grey);
+
+      margin-bottom: 18px;
+    }
+
+    .intro-quote {
+      margin-top: 28px;
+
+      padding: 20px 24px;
+
+      border-left: 4px solid var(--green);
+
+      background: var(--green-soft);
+
+      color: var(--navy);
+
+      font-weight: 700;
+    }
+
+    .about-card {
+      padding: 45px;
+
+      min-height: 440px;
+
+      border-radius: 24px;
+
+      position: relative;
+      overflow: hidden;
+
+      background:
+        linear-gradient(
+          145deg,
+          var(--navy),
+          var(--navy-dark)
+        );
+
+      color: white;
+
+      box-shadow: var(--shadow);
+    }
+
+    .about-card h3 {
+      color: white;
+
+      max-width: 360px;
+
+      font-size: 29px;
+
+      margin-bottom: 25px;
+    }
+
+    .about-card p {
+      max-width: 390px;
+
+      color: rgba(255,255,255,.65);
+
+      font-size: 14px;
+    }
+
+    .about-metrics {
+      position: absolute;
+
+      left: 45px;
+      right: 45px;
+      bottom: 35px;
+
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+
+      gap: 12px;
+    }
+
+    .metric {
+      padding: 15px;
+
+      border: 1px solid rgba(255,255,255,.13);
+
+      border-radius: 10px;
+
+      background: rgba(255,255,255,.05);
+    }
+
+    .metric strong {
+      display: block;
+
+      color: #43d486;
+
+      font-size: 22px;
+    }
+
+    .metric span {
+      color: rgba(255,255,255,.52);
+
+      font-size: 10px;
+    }
+
+    /* =========================
+       SERVICES
+    ========================= */
+
+    .services {
+      background: var(--off-white);
+    }
+
+    .section-heading {
+      max-width: 750px;
+
+      margin-bottom: 52px;
+    }
+
+    .section-heading h2 {
+      color: var(--navy);
+
+      font-size: clamp(34px,5vw,49px);
+
+      letter-spacing: -2px;
+
+      margin-bottom: 17px;
+    }
+
+    .section-heading p {
+      color: var(--grey);
+    }
+
+    .service-grid {
+      display: grid;
+
+      grid-template-columns: repeat(3,1fr);
+
+      gap: 20px;
+    }
+
+    .service {
+      background: white;
+
+      padding: 31px;
+
+      border: 1px solid var(--border);
+
+      border-radius: var(--radius);
+
+      transition: .25s ease;
+    }
+
+    .service:hover {
+      transform: translateY(-7px);
+
+      border-color: transparent;
+
+      box-shadow: var(--shadow);
+    }
+
+    .service-number {
+      width: 48px;
+      height: 48px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 11px;
+
+      color: white;
+
+      font-weight: 800;
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--green),
+          var(--navy)
+        );
+
+      margin-bottom: 24px;
+    }
+
+    .service h3 {
+      color: var(--navy);
+
+      font-size: 20px;
+
+      margin-bottom: 12px;
+    }
+
+    .service p {
+      color: var(--grey);
+
+      font-size: 14px;
+
+      margin-bottom: 18px;
+    }
+
+    .service ul {
+      list-style: none;
+
+      border-top: 1px solid var(--border);
+
+      padding-top: 15px;
+
+      color: var(--grey);
+
+      font-size: 13px;
+    }
+
+    .service li {
+      margin: 6px 0;
+    }
+
+    .service li::before {
+      content: "✓";
+
+      color: var(--green);
+
+      font-weight: 800;
+
+      margin-right: 8px;
+    }
+
+    /* =========================
+       TRAINING PARTNERSHIP
+    ========================= */
+
+    .training-partnership {
+      background:
+        linear-gradient(
+          135deg,
+          #f0faf5,
+          #ffffff
+        );
+    }
+
+    .training-grid {
+      display: grid;
+
+      grid-template-columns: 1.1fr .9fr;
+
+      gap: 60px;
+
+      align-items: center;
+    }
+
+    .training-copy h2 {
+      color: var(--navy);
+
+      font-size: clamp(34px,5vw,50px);
+
+      letter-spacing: -2px;
+
+      margin-bottom: 20px;
+    }
+
+    .training-copy p {
+      color: var(--grey);
+
+      margin-bottom: 18px;
+    }
+
+    .training-list {
+      list-style: none;
+
+      margin-top: 25px;
+    }
+
+    .training-list li {
+      padding: 14px 0;
+
+      border-bottom: 1px solid var(--border);
+
+      font-weight: 600;
+
+      color: var(--navy);
+    }
+
+    .training-list li::before {
+      content: "✓";
+
+      color: var(--green);
+
+      margin-right: 10px;
+    }
+
+    .partner-card {
+      background:
+        linear-gradient(
+          145deg,
+          var(--navy),
+          var(--navy-dark)
+        );
+
+      color: white;
+
+      padding: 42px;
+
+      border-radius: 24px;
+
+      box-shadow: var(--shadow);
+    }
+
+    .partner-card h3 {
+      color: white;
+
+      font-size: 27px;
+
+      margin-bottom: 17px;
+    }
+
+    .partner-card p {
+      color: rgba(255,255,255,.67);
+
+      font-size: 14px;
+
+      margin-bottom: 22px;
+    }
+
+    .partner-tags {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 8px;
+    }
+
+    .partner-tag {
+      padding: 8px 11px;
+
+      border: 1px solid rgba(255,255,255,.15);
+
+      border-radius: 20px;
+
+      background: rgba(255,255,255,.06);
+
+      color: rgba(255,255,255,.8);
+
+      font-size: 11px;
+    }
+
+    /* =========================
+       LMS SECTION
+    ========================= */
+
+    .lms-section {
+      background: var(--off-white);
+    }
+
+    .lms-header {
+      display: flex;
+
+      align-items: end;
+      justify-content: space-between;
+
+      gap: 30px;
+
+      margin-bottom: 40px;
+    }
+
+    .lms-header h2 {
+      color: var(--navy);
+
+      font-size: clamp(34px,5vw,50px);
+
+      letter-spacing: -2px;
+
+      margin-bottom: 15px;
+    }
+
+    .lms-header p {
+      max-width: 720px;
+
+      color: var(--grey);
+    }
+
+    .lms-login-card {
+      background: white;
+
+      border: 1px solid var(--border);
+
+      border-radius: 20px;
+
+      padding: 35px;
+
+      box-shadow: var(--shadow);
+
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 35px;
+
+      align-items: center;
+    }
+
+    .lms-login-copy h3 {
+      color: var(--navy);
+
+      font-size: 26px;
+
+      margin-bottom: 12px;
+    }
+
+    .lms-login-copy p {
+      color: var(--grey);
+
+      font-size: 14px;
+    }
+
+    .login-form {
+      display: grid;
+
+      gap: 13px;
+    }
+
+    .login-form input {
+      width: 100%;
+
+      padding: 13px 15px;
+
+      border-radius: 8px;
+
+      border: 1px solid var(--border);
+
+      background: var(--off-white);
+
+      outline: none;
+    }
+
+    .login-form input:focus {
+      border-color: var(--green);
+
+      background: white;
+    }
+
+    .login-form button {
+      border: none;
+
+      background: var(--navy);
+
+      color: white;
+
+      cursor: pointer;
+    }
+
+    .login-note {
+      color: var(--grey);
+
+      font-size: 11px;
+
+      text-align: center;
+    }
+
+    /* =========================
+       DEMO DASHBOARD
+    ========================= */
+
+    .dashboard {
+      display: none;
+
+      margin-top: 35px;
+
+      background: white;
+
+      border: 1px solid var(--border);
+
+      border-radius: 20px;
+
+      overflow: hidden;
+
+      box-shadow: var(--shadow);
+    }
+
+    .dashboard.active {
+      display: block;
+    }
+
+    .dashboard-top {
+      padding: 28px 30px;
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--navy),
+          var(--navy-light)
+        );
+
+      color: white;
+
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: center;
+
+      gap: 20px;
+    }
+
+    .dashboard-top h3 {
+      color: white;
+
+      font-size: 24px;
+    }
+
+    .dashboard-top p {
+      color: rgba(255,255,255,.65);
+
+      font-size: 13px;
+    }
+
+    .logout-button {
+      background: rgba(255,255,255,.1);
+
+      border: 1px solid rgba(255,255,255,.2);
+
+      color: white;
+
+      padding: 9px 14px;
+
+      border-radius: 7px;
+
+      cursor: pointer;
+    }
+
+    .dashboard-content {
+      padding: 30px;
+    }
+
+    .dashboard-stats {
+      display: grid;
+
+      grid-template-columns: repeat(4,1fr);
+
+      gap: 15px;
+
+      margin-bottom: 30px;
+    }
+
+    .dashboard-stat {
+      padding: 20px;
+
+      border: 1px solid var(--border);
+
+      border-radius: 12px;
+    }
+
+    .dashboard-stat strong {
+      display: block;
+
+      color: var(--navy);
+
+      font-size: 27px;
+    }
+
+    .dashboard-stat span {
+      color: var(--grey);
+
+      font-size: 12px;
+    }
+
+    .training-table-wrap {
+      overflow-x: auto;
+    }
+
+    .training-table {
+      width: 100%;
+
+      border-collapse: collapse;
+
+      min-width: 700px;
+    }
+
+    .training-table th,
+    .training-table td {
+      padding: 15px;
+
+      text-align: left;
+
+      border-bottom: 1px solid var(--border);
+
+      font-size: 13px;
+    }
+
+    .training-table th {
+      color: var(--navy);
+
+      background: var(--off-white);
+
+      font-weight: 800;
+    }
+
+    .status {
+      display: inline-block;
+
+      padding: 5px 9px;
+
+      border-radius: 20px;
+
+      font-size: 10px;
+
+      font-weight: 800;
+    }
+
+    .status.assigned {
+      background: #fff3d7;
+
+      color: #986500;
+    }
+
+    .status.progress {
+      background: #e7f0ff;
+
+      color: #245ba5;
+    }
+
+    .status.complete {
+      background: var(--green-soft);
+
+      color: var(--green);
+    }
+
+    .status.overdue {
+      background: #fdeaea;
+
+      color: var(--danger);
+    }
+
+    .course-button {
+      border: none;
+
+      padding: 8px 12px;
+
+      border-radius: 7px;
+
+      background: var(--green);
+
+      color: white;
+
+      cursor: pointer;
+
+      font-size: 11px;
+
+      font-weight: 700;
+    }
+
+    .course-button.certificate {
+      background: var(--navy);
+    }
+
+    /* =========================
+       NOTIFICATIONS
+    ========================= */
+
+    .notification-panel {
+      margin-top: 25px;
+
+      padding: 20px;
+
+      border-radius: 12px;
+
+      background: #fffaf0;
+
+      border: 1px solid #f0dfb4;
+    }
+
+    .notification-panel strong {
+      color: var(--navy);
+
+      display: block;
+
+      margin-bottom: 5px;
+    }
+
+    .notification-panel p {
+      color: var(--grey);
+
+      font-size: 13px;
+    }
+
+    /* =========================
+       AFRICA
+    ========================= */
+
+    .africa-section {
+      background: white;
+    }
+
+    .africa-grid {
+      display: grid;
+
+      grid-template-columns: .9fr 1.1fr;
+
+      gap: 80px;
+
+      align-items: center;
+    }
+
+    .africa-graphic {
+      min-height: 470px;
+
+      border-radius: 25px;
+
+      position: relative;
+      overflow: hidden;
+
+      background:
+        radial-gradient(
+          circle at center,
+          rgba(0,155,82,.20),
+          transparent 45%
+        ),
+        var(--navy-dark);
+    }
+
+    .africa-outline {
+      position: absolute;
+
+      inset: 60px;
+
+      border: 1px dashed rgba(255,255,255,.20);
+
+      border-radius: 50%;
+    }
+
+    .africa-center {
+      position: absolute;
+
+      left: 50%;
+      top: 50%;
+
+      transform: translate(-50%,-50%);
+
+      width: 210px;
+      height: 210px;
+
+      border-radius: 50%;
+
+      background: rgba(255,255,255,.07);
+
+      border: 1px solid rgba(255,255,255,.18);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      color: white;
+
+      text-align: center;
+    }
+
+    .africa-center strong {
+      display: block;
+
+      font-size: 18px;
+
+      color: white;
+    }
+
+    .africa-center span {
+      display: block;
+
+      margin-top: 5px;
+
+      color: rgba(255,255,255,.52);
+
+      font-size: 11px;
+    }
+
+    .orbit {
+      position: absolute;
+
+      width: 12px;
+      height: 12px;
+
+      border-radius: 50%;
+
+      background: var(--green-light);
+
+      box-shadow: 0 0 20px var(--green-light);
+    }
+
+    .orbit.one {
+      top: 25%;
+      left: 30%;
+    }
+
+    .orbit.two {
+      top: 70%;
+      left: 22%;
+    }
+
+    .orbit.three {
+      top: 23%;
+      right: 24%;
+    }
+
+    .orbit.four {
+      bottom: 20%;
+      right: 28%;
+    }
+
+    .africa-copy h2 {
+      color: var(--navy);
+
+      font-size: clamp(34px,5vw,49px);
+
+      letter-spacing: -2px;
+
+      margin-bottom: 20px;
+    }
+
+    .africa-copy p {
+      color: var(--grey);
+
+      margin-bottom: 18px;
+    }
+
+    .check-list {
+      list-style: none;
+
+      margin-top: 25px;
+    }
+
+    .check-list li {
+      display: flex;
+      gap: 12px;
+
+      margin: 12px 0;
+
+      color: var(--dark);
+
+      font-weight: 600;
+    }
+
+    .check-list li::before {
+      content: "✓";
+
+      flex-shrink: 0;
+
+      width: 24px;
+      height: 24px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 50%;
+
+      background: var(--green-soft);
+
+      color: var(--green);
+
+      font-size: 12px;
+    }
+
+    /* =========================
+       PROCESS
+    ========================= */
+
+    .process {
+      background: var(--navy);
+
+      color: white;
+    }
+
+    .process .section-heading h2 {
+      color: white;
+    }
+
+    .process .section-heading p {
+      color: rgba(255,255,255,.62);
+    }
+
+    .process .section-label {
+      color: #43d486;
+    }
+
+    .process-grid {
+      display: grid;
+
+      grid-template-columns: repeat(4,1fr);
+
+      gap: 18px;
+    }
+
+    .process-step {
+      padding-top: 25px;
+
+      border-top: 2px solid rgba(255,255,255,.14);
+    }
+
+    .process-step .number {
+      color: #43d486;
+
+      font-size: 12px;
+      font-weight: 800;
+
+      letter-spacing: 1.5px;
+
+      margin-bottom: 18px;
+    }
+
+    .process-step h3 {
+      color: white;
+
+      font-size: 21px;
+
+      margin-bottom: 11px;
+    }
+
+    .process-step p {
+      color: rgba(255,255,255,.58);
+
+      font-size: 13px;
+    }
+
+    /* =========================
+       PURPOSE
+    ========================= */
+
+    .purpose {
+      background: var(--off-white);
+    }
+
+    .purpose-grid {
+      display: grid;
+
+      grid-template-columns: repeat(2,1fr);
+
+      gap: 22px;
+    }
+
+    .purpose-card {
+      padding: 45px;
+
+      border-radius: var(--radius);
+
+      background: white;
+
+      border: 1px solid var(--border);
+    }
+
+    .purpose-card.green {
+      background:
+        linear-gradient(
+          135deg,
+          var(--green),
+          #008446
+        );
+
+      border: none;
+    }
+
+    .purpose-card h3 {
+      font-size: 13px;
+
+      color: var(--green);
+
+      text-transform: uppercase;
+
+      letter-spacing: 2px;
+
+      margin-bottom: 18px;
+    }
+
+    .purpose-card.green h3 {
+      color: white;
+    }
+
+    .purpose-card p {
+      color: var(--navy);
+
+      font-family: "Manrope";
+
+      font-weight: 700;
+
+      font-size: 25px;
+
+      line-height: 1.35;
+    }
+
+    .purpose-card.green p {
+      color: white;
+    }
+
+    /* =========================
+       VALUES
+    ========================= */
+
+    .values {
+      background: white;
+    }
+
+    .values-grid {
+      display: grid;
+
+      grid-template-columns: repeat(3,1fr);
+
+      gap: 15px;
+    }
+
+    .value {
+      padding: 24px;
+
+      border: 1px solid var(--border);
+
+      border-radius: 13px;
+
+      transition: .2s;
+    }
+
+    .value:hover {
+      border-color: var(--green);
+
+      transform: translateY(-3px);
+    }
+
+    .value strong {
+      display: block;
+
+      color: var(--navy);
+
+      margin-bottom: 5px;
+    }
+
+    .value span {
+      color: var(--grey);
+
+      font-size: 13px;
+    }
+
+    /* =========================
+       INSIGHTS
+    ========================= */
+
+    .insights {
+      background: var(--off-white);
+    }
+
+    .insight-grid {
+      display: grid;
+
+      grid-template-columns: repeat(3,1fr);
+
+      gap: 20px;
+    }
+
+    .insight-card {
+      background: white;
+
+      border-radius: var(--radius);
+
+      overflow: hidden;
+
+      border: 1px solid var(--border);
+    }
+
+    .insight-image {
+      height: 170px;
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--navy),
+          var(--green)
+        );
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      color: white;
+
+      font-size: 12px;
+      font-weight: 800;
+
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .insight-body {
+      padding: 25px;
+    }
+
+    .insight-body small {
+      color: var(--green);
+
+      font-weight: 800;
+
+      font-size: 10px;
+
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    .insight-body h3 {
+      color: var(--navy);
+
+      font-size: 19px;
+
+      margin: 9px 0;
+    }
+
+    .insight-body p {
+      color: var(--grey);
+
+      font-size: 13px;
+    }
+
+    /* =========================
+       CTA
+    ========================= */
+
+    .cta {
+      padding: 90px 0;
+
+      background:
+        radial-gradient(
+          circle at 85% 20%,
+          rgba(0,155,82,.22),
+          transparent 30%
+        ),
+        var(--navy-dark);
+
+      color: white;
+    }
+
+    .cta-inner {
+      display: flex;
+
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 40px;
+    }
+
+    .cta h2 {
+      color: white;
+
+      font-size: clamp(34px,5vw,52px);
+
+      letter-spacing: -2px;
+    }
+
+    .cta p {
+      max-width: 650px;
+
+      color: rgba(255,255,255,.60);
+
+      margin-top: 13px;
+    }
+
+    /* =========================
+       CONTACT
+    ========================= */
+
+    .contact {
+      background: white;
+    }
+
+    .contact-grid {
+      display: grid;
+
+      grid-template-columns: .8fr 1.2fr;
+
+      gap: 80px;
+    }
+
+    .contact h2 {
+      color: var(--navy);
+
+      font-size: 48px;
+
+      letter-spacing: -2px;
+
+      margin-bottom: 17px;
+    }
+
+    .contact-intro {
+      color: var(--grey);
+    }
+
+    .contact-details {
+      margin-top: 35px;
+    }
+
+    .contact-item {
+      margin-bottom: 23px;
+    }
+
+    .contact-item small {
+      display: block;
+
+      color: var(--green);
+
+      font-size: 10px;
+      font-weight: 800;
+
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    .contact-item strong {
+      color: var(--navy);
+    }
+
+    form {
+      display: grid;
+      gap: 15px;
+    }
+
+    .form-row {
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 15px;
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+
+      padding: 14px 16px;
+
+      border-radius: 8px;
+
+      border: 1px solid var(--border);
+
+      background: var(--off-white);
+
+      color: var(--dark);
+
+      outline: none;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      border-color: var(--green);
+
+      background: white;
+    }
+
+    textarea {
+      min-height: 150px;
+
+      resize: vertical;
+    }
+
+    form button {
+      border: none;
+
+      cursor: pointer;
+
+      justify-self: start;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      background: #021b36;
+
+      color: white;
+
+      padding: 55px 0 25px;
+    }
+
+    .footer-grid {
+      display: grid;
+
+      grid-template-columns: 1.5fr 1fr 1fr;
+
+      gap: 60px;
+
+      padding-bottom: 40px;
+
+      border-bottom:
+        1px solid rgba(255,255,255,.10);
+    }
+
+    .footer-logo {
+      width: 220px;
+
+      margin-bottom: 20px;
+
+      background: white;
+
+      padding: 7px;
+
+      border-radius: 5px;
+    }
+
+    .footer-description {
+      max-width: 420px;
+
+      color: rgba(255,255,255,.52);
+
+      font-size: 13px;
+    }
+
+    footer h4 {
+      color: white;
+
+      font-size: 14px;
+
+      margin-bottom: 15px;
+    }
+
+    .footer-links {
+      list-style: none;
+
+      color: rgba(255,255,255,.52);
+
+      font-size: 13px;
+    }
+
+    .footer-links li {
+      margin: 7px 0;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    .copyright {
+      padding-top: 22px;
+
+      display: flex;
+
+      justify-content: space-between;
+
+      gap: 20px;
+
+      color: rgba(255,255,255,.35);
+
+      font-size: 11px;
+    }
+
+    /* =========================
+       WHATSAPP
+    ========================= */
+
+    .whatsapp {
+      position: fixed;
+
+      right: 22px;
+      bottom: 22px;
+
+      z-index: 999;
+
+      width: 56px;
+      height: 56px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 50%;
+
+      background: #25D366;
+
+      color: white;
+
+      font-size: 25px;
+
+      box-shadow: 0 8px 25px rgba(0,0,0,.20);
+
+      transition: .2s;
+    }
+
+    .whatsapp:hover {
+      transform: scale(1.08);
+    }
+
+    /* =========================
+       CERTIFICATE MODAL
+    ========================= */
+
+    .modal {
+      position: fixed;
+
+      inset: 0;
+
+      background: rgba(3,38,79,.75);
+
+      z-index: 3000;
+
+      display: none;
+
+      align-items: center;
+      justify-content: center;
+
+      padding: 20px;
+    }
+
+    .modal.active {
+      display: flex;
+    }
+
+    .certificate {
+      width: min(800px, 100%);
+
+      background: white;
+
+      padding: 55px;
+
+      border: 10px solid var(--green);
+
+      outline: 3px solid var(--navy);
+
+      outline-offset: -20px;
+
+      text-align: center;
+
+      position: relative;
+    }
+
+    .certificate small {
+      color: var(--green);
+
+      text-transform: uppercase;
+
+      font-weight: 800;
+
+      letter-spacing: 2px;
+    }
+
+    .certificate h2 {
+      color: var(--navy);
+
+      font-size: 38px;
+
+      margin: 20px 0;
+    }
+
+    .certificate h3 {
+      color: var(--dark);
+
+      font-size: 26px;
+
+      margin: 20px 0;
+    }
+
+    .certificate p {
+      color: var(--grey);
+
+      font-size: 14px;
+    }
+
+    .certificate-number {
+      margin-top: 25px;
+
+      color: var(--grey);
+
+      font-size: 11px;
+    }
+
+    .modal-actions {
+      margin-top: 25px;
+
+      display: flex;
+
+      justify-content: center;
+
+      gap: 10px;
+    }
+
+    .modal-actions button {
+      border: none;
+
+      cursor: pointer;
+    }
+
+    .close-modal {
+      background: #eef2f5;
+
+      color: var(--dark);
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media(max-width: 1050px) {
+
+      .nav-links {
+        display: none;
+
+        position: absolute;
+
+        left: 0;
+        right: 0;
+        top: 92px;
+
+        padding: 25px;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        background: white;
+
+        box-shadow: 0 15px 30px rgba(0,0,0,.08);
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .mobile-button {
+        display: block;
+      }
+
+      .hero-visual {
+        opacity: .25;
+
+        right: -100px;
+      }
+
+      .intro-grid,
+      .africa-grid,
+      .contact-grid,
+      .training-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service-grid,
+      .insight-grid {
+        grid-template-columns: repeat(2,1fr);
+      }
+
+      .process-grid {
+        grid-template-columns: repeat(2,1fr);
+      }
+
+      .values-grid {
+        grid-template-columns: repeat(2,1fr);
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .dashboard-stats {
+        grid-template-columns: repeat(2,1fr);
+      }
+    }
+
+    @media(max-width: 700px) {
+
+      section {
+        padding: 75px 0;
+      }
+
+      .nav {
+        height: 75px;
+      }
+
+      .brand-logo {
+        width: 175px;
+      }
+
+      .nav-links {
+        top: 75px;
+      }
+
+      .hero {
+        min-height: 720px;
+
+        padding-top: 140px;
+      }
+
+      .hero h1 {
+        letter-spacing: -2px;
+      }
+
+      .hero-subtitle {
+        font-size: 16px;
+      }
+
+      .hero-visual {
+        display: none;
+      }
+
+      .service-grid,
+      .insight-grid,
+      .process-grid,
+      .values-grid,
+      .purpose-grid,
+      .footer-grid,
+      .lms-login-card,
+      .dashboard-stats {
+        grid-template-columns: 1fr;
+      }
+
+      .about-metrics {
+        position: static;
+
+        margin-top: 35px;
+      }
+
+      .about-card {
+        min-height: auto;
+      }
+
+      .cta-inner {
+        flex-direction: column;
+
+        align-items: flex-start;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .contact h2 {
+        font-size: 38px;
+      }
+
+      .copyright {
+        flex-direction: column;
+      }
+
+      .lms-header {
+        display: block;
+      }
+
+      .dashboard-top {
+        align-items: flex-start;
+
+        flex-direction: column;
+      }
+
+      .certificate {
+        padding: 35px 20px;
+      }
+
+      .certificate h2 {
+        font-size: 29px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+<!-- ========================================================
+     HEADER
+========================================================= -->
+
+<header>
+
+  <div class="container nav">
+
+    <a href="#home">
+
+      <img
+        src="factfinder-logo.jpg"
+        class="brand-logo"
+        alt="Fact Finder Research"
+      >
+
+    </a>
+
+    <button
+      class="mobile-button"
+      onclick="toggleMenu()"
+      aria-label="Open navigation"
+    >
+      ☰
+    </button>
+
+    <ul class="nav-links" id="navLinks">
+
+      <li>
+        <a href="#home">Home</a>
+      </li>
+
+      <li>
+        <a href="#about">About</a>
+      </li>
+
+      <li>
+        <a href="#services">Services</a>
+      </li>
+
+      <li>
+        <a href="#training">Training</a>
+      </li>
+
+      <li>
+        <a href="#portal">Learning Portal</a>
+      </li>
+
+      <li>
+        <a href="#insights">Insights</a>
+      </li>
+
+      <li>
+        <a href="#contact" class="nav-button">
+          Get in Touch
+        </a>
+      </li>
+
+    </ul>
+
+  </div>
+
+</header>
+
+
+<!-- ========================================================
+     HERO
+========================================================= -->
+
+<section class="hero" id="home">
+
+  <div class="hero-grid"></div>
+
+  <div class="container">
+
+    <div class="hero-content">
+
+      <div class="hero-label">
+        Research • Data • Evidence • Training • Impact
+      </div>
+
+      <h1>
+        Better Data.<br>
+        <span>Smarter Decisions.</span><br>
+        Greater Impact.
+      </h1>
+
+      <p class="hero-subtitle">
+
+        Fact Finder Research provides research, data,
+        monitoring and evaluation, consultancy, technology,
+        professional training, and clinical research
+        capacity-building solutions for organisations in Kenya,
+        Africa, and beyond.
+
+      </p>
+
+      <div class="hero-buttons">
+
+        <a
+          href="#services"
+          class="button button-primary"
+        >
+          Explore Our Services
+        </a>
+
+        <a
+          href="#portal"
+          class="button button-green"
+        >
+          Access Learning Portal
+        </a>
+
+        <a
+          href="#contact"
+          class="button button-outline"
+        >
+          Start a Conversation
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="hero-visual">
+
+    <div class="circle one"></div>
+    <div class="circle two"></div>
+    <div class="circle three"></div>
+
+    <div class="africa-card">
+
+      <div class="symbol">⌕</div>
+
+      <strong>Research + Learning</strong>
+
+      <span>Evidence across Africa</span>
+
+    </div>
+
+    <div class="data-bars">
+      <i></i>
+      <i></i>
+      <i></i>
+      <i></i>
+      <i></i>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ========================================================
+     ABOUT
+========================================================= -->
+
+<section class="intro" id="about">
+
+  <div class="container intro-grid">
+
+    <div>
+
+      <div class="section-label">
+        About Fact Finder
+      </div>
+
+      <h2>
+        Your research, data
+        and learning partner.
+      </h2>
+
+      <p>
+        Fact Finder Research is a research and consultancy firm
+        bringing together expertise in research, data science,
+        statistics, software engineering, policy development,
+        monitoring and evaluation, and professional capacity
+        development.
+      </p>
+
+      <p>
+        We provide practical and customised solutions designed
+        around the objectives, context, and information needs
+        of our clients and partners.
+      </p>
+
+      <p>
+        Our expanded professional development offering supports
+        early-career professionals working in clinical research
+        and related disciplines through structured, credible,
+        practical training.
+      </p>
+
+      <div class="intro-quote">
+        We transform information into evidence, insight,
+        capability, and action.
+      </div>
+
+    </div>
+
+    <div class="about-card">
+
+      <h3>
+        From research questions
+        to actionable insight
+        and professional capability.
+      </h3>
+
+      <p>
+        Our multidisciplinary approach connects technical
+        expertise with the practical realities faced by
+        organisations, researchers, clinical research teams,
+        and professionals.
+      </p>
+
+      <div class="about-metrics">
+
+        <div class="metric">
+          <strong>01</strong>
+          <span>Research</span>
+        </div>
+
+        <div class="metric">
+          <strong>02</strong>
+          <span>Analysis</span>
+        </div>
+
+        <div class="metric">
+          <strong>03</strong>
+          <span>Learning</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ========================================================
+     SERVICES
+========================================================= -->
+
+<section class="services" id="services">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <div class="section-label">
+        Our Services
+      </div>
+
+      <h2>
+        Evidence-driven solutions
+        built around your needs.
+      </h2>
+
+      <p>
+        Our services cover the complete journey from research
+        design and data collection to analysis, interpretation,
+        reporting, policy, technology, and capacity development.
+      </p>
+
+    </div>
+
+    <div class="service-grid">
+
+      <article class="service">
+
+        <div class="service-number">01</div>
+
+        <h3>
+          Research & Surveys
+        </h3>
+
+        <p>
+          Research designed to understand people, markets,
+          organisations, programmes, and operating environments.
+        </p>
+
+        <ul>
+          <li>Baseline surveys</li>
+          <li>Feasibility studies</li>
+          <li>Market evaluation</li>
+          <li>Customer research</li>
+        </ul>
+
+      </article>
+
+
+      <article class="service">
+
+        <div class="service-number">02</div>
+
+        <h3>
+          Data & Analytics
+        </h3>
+
+        <p>
+          Turning raw information into useful evidence through
+          structured data management, analysis, and interpretation.
+        </p>
+
+        <ul>
+          <li>Data entry</li>
+          <li>Data management</li>
+          <li>Statistical analysis</li>
+          <li>Reporting & interpretation</li>
+        </ul>
+
+      </article>
+
+
+      <article class="service">
+
+        <div class="service-number">03</div>
+
+        <h3>
+          Monitoring & Evaluation
+        </h3>
+
+        <p>
+          Helping organisations measure performance, understand
+          results, and generate evidence for learning.
+        </p>
+
+        <ul>
+          <li>M&E support</li>
+          <li>Assessments</li>
+          <li>Performance measurement</li>
+          <li>Learning & reporting</li>
+        </ul>
+
+      </article>
+
+
+      <article class="service">
+
+        <div class="service-number">04</div>
+
+        <h3>
+          Policy & Consultancy
+        </h3>
+
+        <p>
+          Research-informed consultancy supporting policy,
+          contextual analysis, projects, and organisational needs.
+        </p>
+
+        <ul>
+          <li>Policy development</li>
+          <li>Contextual analysis</li>
+          <li>Project management</li>
+          <li>Proposal writing</li>
+        </ul>
+
+      </article>
+
+
+      <article class="service">
+
+        <div class="service-number">05</div>
+
+        <h3>
+          Technology & Systems
+        </h3>
+
+        <p>
+          Database and system solutions that help organisations
+          manage information effectively.
+        </p>
+
+        <ul>
+          <li>Database development</li>
+          <li>System development</li>
+          <li>Data systems</li>
+          <li>Information management</li>
+        </ul>
+
+      </article>
+
+
+      <article class="service">
+
+        <div class="service-number">06</div>
+
+        <h3>
+          Capacity Building
+        </h3>
+
+        <p>
+          Training and knowledge transfer designed to strengthen
+          internal research, clinical research, statistical,
+          programming, writing, and analytical capabilities.
+        </p>
+
+        <ul>
+          <li>Professional training</li>
+          <li>Technical assistance</li>
+          <li>Knowledge transfer</li>
+          <li>Professional development</li>
+        </ul>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ========================================================
+     CLINICAL RESEARCH TRAINING PARTNERSHIPS
+========================================================= -->
+
+<section class="training-partnership" id="training">
+
+  <div class="container training-grid">
+
+    <div class="training-copy">
+
+      <div class="section-label">
+        Professional Training & Partnerships
+      </div>
+
+      <h2>
+        Building the next generation
+        of clinical research professionals.
+      </h2>
+
+      <p>
+        Fact Finder Research partners with Contract Research
+        Organisations (CROs), pharmaceutical companies,
+        research organisations, academic institutions, and
+        other industry stakeholders to provide credible,
+        practical, and career-focused training.
+      </p>
+
+      <p>
+        Our training programmes are designed to support early-career
+        professionals seeking to strengthen their understanding of
+        clinical research processes, data standards, programming,
+        documentation, and clinical trial data management.
+      </p>
+
+      <ul class="training-list">
+
+        <li>
+          Biostatistics for Clinical Research
+        </li>
+
+        <li>
+          Statistical Programming
+        </li>
+
+        <li>
+          Medical Writing
+        </li>
+
+        <li>
+          Clinical Data Management
+        </li>
+
+        <li>
+          Clinical Research Fundamentals
+        </li>
+
+        <li>
+          CDISC Standards and Implementation
+        </li>
+
+        <li>
+          Clinical Trial Database Management Systems
+        </li>
+
+        <li>
+          Data Standards, Quality and Documentation
+        </li>
+
+      </ul>
+
+    </div>
+
+
+    <div class="partner-card">
+
+      <h3>
+        Partner with us for workforce development.
+      </h3>
+
+      <p>
+        We can develop structured training programmes for
+        organisations that want to onboard, upskill, or
+        continuously develop their teams.
+      </p>
+
+      <div class="partner-tags">
+
+        <span class="partner-tag">
+          CROs
+        </span>
+
+        <span class="partner-tag">
+          Pharmaceutical Companies
+        </span>
+
+        <span class="partner-tag">
+          Research Organisations
+        </span>
+
+        <span class="partner-tag">
+          Universities
+        </span>
+
+        <span class="partner-tag">
+          Clinical Research Teams
+        </span>
+
+        <span class="partner-tag">
+          Early-Career Professionals
+        </span>
+
+      </div>
+
+      <br>
+
+      <a
+        href="#contact"
+        class="button button-green"
+      >
+        Discuss a Training Partnership →
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ========================================================
+     LEARNING MANAGEMENT PORTAL
+========================================================= -->
+
+<section class="lms-section" id="portal">
+
+  <div class="container">
+
+    <div class="lms-header">
+
+      <div>
+
+        <div class="section-label">
+          Learning Management Portal
+        </div>
+
+        <h2>
+          Learn. Complete. Get Certified.
+        </h2>
+
+        <p>
+          A central learning environment where students,
+          employees, trainees, and professional learners can
+          access assigned training, complete exercises,
+          monitor deadlines, receive reminders, and obtain
+          certificates after successfully completing their
+          required learning activities.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="lms-login-card">
+
+      <div class="lms-login-copy">
+
+        <h3>
+          Student & Employee Login
+        </h3>
+
+        <p>
+          Access your assigned courses, training exercises,
+          progress information, upcoming deadlines,
+          notifications, and certificates.
+        </p>
+
+        <br>
+
+        <p>
+          <strong>Demo:</strong>
+          Enter any email and password to preview the portal.
+        </p>
+
+      </div>
+
+
+      <form
+        class="login-form"
+        onsubmit="loginPortal(event)"
+      >
+
+        <input
+          type="email"
+          id="loginEmail"
+          placeholder="Email address"
+          required
+        >
+
+        <input
+          type="password"
+          id="loginPassword"
+          placeholder="Password"
+          required
+        >
+
+        <button
+          type="submit"
+          class="button"
+        >
+          Login to Learning Portal →
+        </button>
+
+        <div class="login-note">
+          Production version should connect to secure
+          authentication and a database.
+        </div>
+
+      </form>
+
+    </div>
+
+
+    <!-- DEMO DASHBOARD -->
+
+    <div
+      class="dashboard"
+      id="studentDashboard"
+    >
+
+      <div class="dashboard-top">
+
+        <div>
+
+          <h3>
+            Welcome, <span id="studentName">Learner</span>
+          </h3>
+
+          <p>
+            Your Fact Finder Research Learning Dashboard
+          </p>
+
+        </div>
+
+        <button
+          class="logout-button"
+          onclick="logoutPortal()"
+        >
+          Logout
+        </button>
+
+      </div>
+
+
+      <div class="dashboard-content">
+
+        <div class="dashboard-stats">
+
+          <div class="dashboard-stat">
+
+            <strong>4</strong>
+
+            <span>
+              Assigned Trainings
+            </span>
+
+          </div>
+
+          <div class="dashboard-stat">
+
+            <strong>2</strong>
+
+            <span>
+              In Progress
+            </span>
+
+          </div>
+
+          <div class="dashboard-stat">
+
+            <strong>1</strong>
+
+            <span>
+              Completed
+            </span>
+
+          </div>
+
+          <div class="dashboard-stat">
+
+            <strong>1</strong>
+
+            <span>
+              Due Soon
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <div class="notification-panel">
+
+          <strong>
+            🔔 Training Notification
+          </strong>
+
+          <p>
+            You have been assigned new training:
+            <strong>Introduction to Clinical Research & GCP</strong>.
+            Please complete the course before its due date.
+            Reminder notifications can be sent automatically
+            through the production LMS.
+          </p>
+
+        </div>
+
+
+        <br>
+
+
+        <h3 style="color:var(--navy); margin-bottom:15px;">
+          My Assigned Training
+        </h3>
+
+
+        <div class="training-table-wrap">
+
+          <table class="training-table">
+
+            <thead>
+
+              <tr>
+
+                <th>
+                  Training
+                </th>
+
+                <th>
+                  Due Date
+                </th>
+
+                <th>
+                  Progress
+                </th>
+
+                <th>
+                  Status
+                </th>
+
+                <th>
+                  Action
+                </th>
+
+              </tr>
+
+            </thead>
+
+            <tbody>
+
+              <tr>
+
+                <td>
+                  Introduction to Clinical Research & GCP
+                </td>
+
+                <td>
+                  30 Apr 2026
+                </td>
+
+                <td>
+                  0%
+                </td>
+
+                <td>
+                  <span class="status assigned">
+                    Assigned
+                  </span>
+                </td>
+
+                <td>
+
+                  <button
+                    class="course-button"
+                    onclick="startTraining('Introduction to Clinical Research & GCP')"
+                  >
+                    Start
+                  </button>
+
+                </td>
+
+              </tr>
+
+
+              <tr>
+
+                <td>
+                  CDISC Fundamentals
+                </td>
+
+                <td>
+                  15 May 2026
+                </td>
+
+                <td>
+                  45%
+                </td>
+
+                <td>
+                  <span class="status progress">
+                    In Progress
+                  </span>
+                </td>
+
+                <td>
+
+                  <button
+                    class="course-button"
+                    onclick="startTraining('CDISC Fundamentals')"
+                  >
+                    Continue
+                  </button>
+
+                </td>
+
+              </tr>
+
+
+              <tr>
+
+                <td>
+                  Statistical Programming for Clinical Trials
+                </td>
+
+                <td>
+                  30 May 2026
+                </td>
+
+                <td>
+                  100%
+                </td>
+
+                <td>
+                  <span class="status complete">
+                    Completed
+                  </span>
+                </td>
+
+                <td>
+
+                  <button
+                    class="course-button certificate"
+                    onclick="generateCertificate('Statistical Programming for Clinical Trials')"
+                  >
+                    Certificate
+                  </button>
+
+                </td>
+
+              </tr>
+
+
+              <tr>
+
+                <td>
+                  Clinical Data Management Systems
+                </td>
+
+                <td>
+                  10 Jun 2026
+                </td>
+
+                <td>
+                  10%
+                </td>
+
+                <td>
+                  <span class="status progress">
+                    In Progress
+                  </span>
+                </td>
+
+                <td>
+
+                  <button
+                    class="course-button"
+                    onclick="startTraining('Clinical Data Management Systems')"
+                  >
+                    Continue
+                  </button>
+
+                </td>
+
+              </tr>
+
+            </tbody>
+
+          </table>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ========================================================
+     AFRICA
+========================================================= -->
+
+<section class="africa-section">
+
+  <div class="container africa-grid">
+
+    <div class="africa-graphic">
+
+      <div class="africa-outline"></div>
+
+      <div class="orbit one"></div>
+      <div class="orbit two"></div>
+      <div class="orbit three"></div>
+      <div class="orbit four"></div>
+
+      <div class="africa-center">
+
+        <div>
+
+          <strong>
+            AFRICA
+          </strong>
+
+          <span>
+            Research • Data • Evidence • Learning
+          </span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="africa-copy">
+
+      <div class="section-label">
+        Our Perspective
+      </div>
+
+      <h2>
+        African context.
+        Evidence-led solutions.
+      </h2>
+
+      <p>
+        We understand that research does not happen in isolation.
+        Context matters — from the questions we ask to the way
+        information is collected, interpreted, and applied.
+      </p>
+
+      <p>
+        Our multidisciplinary approach brings together technical
+        and functional expertise to develop solutions that are
+        relevant to the needs of organisations operating in
+        Kenya and across Africa.
+      </p>
+
+      <ul class="check-list">
+
+        <li>
+          Context-sensitive research
+        </li>
+
+        <li>
+          Multidisciplinary expertise
+        </li>
+
+        <li>
+          Practical, actionable findings
+        </li>
+
+        <li>
+          Knowledge transfer and capacity building
+        </li>
+
+        <li>
+          Clinical research professional development
+        </li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ========================================================
+     APPROACH
+========================================================= -->
+
+<section class="process" id="approach">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <div class="section-label">
+        Our Approach
+      </div>
+
+      <h2>
+        From questions to evidence.
+      </h2>
+
+      <p>
+        We structure our work around a simple principle:
+        understand the problem, gather the evidence, find the
+        meaning, and support action.
+      </p>
+
+    </div>
+
+
+    <div class="process-grid">
+
+      <div class="process-step">
+
+        <div class="number">
+          01 — UNDERSTAND
+        </div>
+
+        <h3>
+          Start with the question.
+        </h3>
+
+        <p>
+          We understand your objectives, context, challenges,
+          and information needs.
+        </p>
+
+      </div>
+
+
+      <div class="process-step">
+
+        <div class="number">
+          02 — RESEARCH
+        </div>
+
+        <h3>
+          Gather the evidence.
+        </h3>
+
+        <p>
+          We design appropriate research approaches and collect
+          relevant and reliable information.
+        </p>
+
+      </div>
+
+
+      <div class="process-step">
+
+        <div class="number">
+          03 — ANALYSE
+        </div>
+
+        <h3>
+          Find the meaning.
+        </h3>
+
+        <p>
+          We analyse and interpret information to identify
+          patterns, findings, and insights.
+        </p>
+
+      </div>
+
+
+      <div class="process-step">
+
+        <div class="number">
+          04 — APPLY
+        </div>
+
+        <h3>
+          Turn insight into action.
+        </h3>
+
+        <p>
+          We translate evidence into practical recommendations,
+          systems, training, and decisions.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ========================================================
+     PURPOSE
+========================================================= -->
+
+<section class="purpose">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <div class="section-label">
+        Our Purpose
+      </div>
+
+      <h2>
+        What guides our work.
+      </h2>
+
+    </div>
+
+
+    <div class="purpose-grid">
+
+      <div class="purpose-card green">
+
+        <h3>
+          Our Mission
+        </h3>
+
+        <p>
+          Building a world where applicable and actionable
+          decisions are made from data.
+        </p>
+
+      </div>
+
+
+      <div class="purpose-card">
+
+        <h3>
+          Our Vision
+        </h3>
+
+        <p>
+          To be the preferred destination for research, policy,
+          analytic, technology, and professional learning
+          solutions in Africa and beyond.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ========================================================
+     VALUES
+========================================================= -->
+
+<section class="values" id="values">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <div class="section-label">
+        Our Values
+      </div>
+
+      <h2>
+        Principles behind our work.
+      </h2>
+
+      <p>
+        Our relationships and professional standards are built
+        around integrity, evidence, quality, and dependability.
+      </p>
+
+    </div>
+
+
+    <div class="values-grid">
+
+      <div class="value">
+        <strong>Integrity</strong>
+        <span>Honesty, professionalism, and ethical practice.</span>
+      </div>
+
+      <div class="value">
+        <strong>Timeliness</strong>
+        <span>Respecting deadlines and commitments.</span>
+      </div>
+
+      <div class="value">
+        <strong>Communication</strong>
+        <span>Clear and constructive client communication.</span>
+      </div>
+
+      <div class="value">
+        <strong>Evidence</strong>
+        <span>Supporting decisions with credible information.</span>
+      </div>
+
+      <div class="value">
+        <strong>Consistency</strong>
+        <span>Reliable processes and dependable outputs.</span>
+      </div>
+
+      <div class="value">
+        <strong>Dependability</strong>
+        <span>Being a partner clients can rely upon.</span>
+      </div>
+
+      <div class="value">
+        <strong>Quality</strong>
+        <span>Maintaining high standards across our work.</span>
+      </div>
+
+      <div class="value">
+        <strong>Dedication</strong>
+        <span>Commitment to every assignment.</span>
+      </div>
+
+      <div class="value">
+        <strong>Transparency</strong>
+        <span>Openness and clarity in our work.</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ========================================================
+     INSIGHTS
+========================================================= -->
+
+<section class="insights" id="insights">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <div class="section-label">
+        Insights
+      </div>
+
+      <h2>
+        Evidence worth exploring.
+      </h2>
+
+      <p>
+        A future home for Fact Finder research reports,
+        publications, articles, training resources,
+        and data insights.
+      </p>
+
+    </div>
+
+
+    <div class="insight-grid">
+
+      <article class="insight-card">
+
+        <div class="insight-image">
+          Research
+        </div>
+
+        <div class="insight-body">
+
+          <small>
+            Research & Analysis
+          </small>
+
+          <h3>
+            Research findings and perspectives
+          </h3>
+
+          <p>
+            Publish selected research findings and analysis
+            from Fact Finder projects.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <article class="insight-card">
+
+        <div class="insight-image">
+          Clinical Research
+        </div>
+
+        <div class="insight-body">
+
+          <small>
+            Clinical Research
+          </small>
+
+          <h3>
+            Clinical research learning resources
+          </h3>
+
+          <p>
+            Share educational resources and professional
+            development content for clinical research
+            professionals.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <article class="insight-card">
+
+        <div class="insight-image">
+          Data
+        </div>
+
+        <div class="insight-body">
+
+          <small>
+            Data & Standards
+          </small>
+
+          <h3>
+            Making sense of complex information
+          </h3>
+
+          <p>
+            Share useful data perspectives, visualisations,
+            standards, and analytical insights.
+          </p>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ========================================================
+     CTA
+========================================================= -->
+
+<section class="cta">
+
+  <div class="container cta-inner">
+
+    <div>
+
+      <h2>
+        Have a research,
+        data, or training challenge?
+      </h2>
+
+      <p>
+        Tell us what you are trying to understand, measure,
+        evaluate, improve, or learn. Let's explore how
+        Fact Finder Research can support your objectives.
+      </p>
+
+    </div>
+
+
+    <a
+      href="#contact"
+      class="button button-green"
+    >
+      Start a Conversation →
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- ========================================================
+     CONTACT
+========================================================= -->
+
+<section class="contact" id="contact">
+
+  <div class="container contact-grid">
+
+    <div>
+
+      <div class="section-label">
+        Contact Fact Finder
+      </div>
+
+      <h2>
+        Let's work together.
+      </h2>
+
+      <p class="contact-intro">
+        Get in touch about your research, data, policy,
+        monitoring and evaluation, consultancy, technology,
+        professional training, or clinical research
+        capacity-building requirements.
+      </p>
+
+
+      <div class="contact-details">
+
+        <div class="contact-item">
+
+          <small>
+            Office
+          </small>
+
+          <strong>
+            3rd Floor, Suite 302,<br>
+            Alimex Plaza,<br>
+            Mombasa Road,<br>
+            Nairobi, Kenya
+          </strong>
+
+        </div>
+
+
+        <div class="contact-item">
+
+          <small>
+            Office Telephone
+          </small>
+
+          <strong>
+            +254 707 465 892 / +254 107 465 892
+          </strong>
+
+        </div>
+
+
+        <div class="contact-item">
+
+          <small>
+            Email
+          </small>
+
+          <strong>
+            factfinderke@gmail.com
+          </strong>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <form
+      action="mailto:factfinderke@gmail.com"
+      method="post"
+      enctype="text/plain"
+    >
+
+      <div class="form-row">
+
+        <input
+          type="text"
+          name="Name"
+          placeholder="Your name"
+          required
+        >
+
+        <input
+          type="email"
+          name="Email"
+          placeholder="Email address"
+          required
+        >
+
+      </div>
+
+
+      <input
+        type="text"
+        name="Organisation"
+        placeholder="Organisation"
+      >
+
+
+      <select name="Service">
+
+        <option value="">
+          What can we help you with?
+        </option>
+
+        <option>
+          Research & Surveys
+        </option>
+
+        <option>
+          Data & Analytics
+        </option>
+
+        <option>
+          Monitoring & Evaluation
+        </option>
+
+        <option>
+          Policy & Consultancy
+        </option>
+
+        <option>
+          Technology & Systems
+        </option>
+
+        <option>
+          Clinical Research Training
+        </option>
+
+        <option>
+          CDISC Training
+        </option>
+
+        <option>
+          Statistical Programming Training
+        </option>
+
+        <option>
+          Medical Writing Training
+        </option>
+
+        <option>
+          Clinical Data Management Training
+        </option>
+
+        <option>
+          LMS / Corporate Training Partnership
+        </option>
+
+        <option>
+          Other
+        </option>
+
+      </select>
+
+
+      <textarea
+        name="Message"
+        placeholder="Tell us briefly about your project, training requirement, or partnership opportunity..."
+      ></textarea>
+
+
+      <button
+        type="submit"
+        class="button button-green"
+      >
+        Send Enquiry →
+      </button>
+
+    </form>
+
+  </div>
+
+</section>
+
+
+<!-- ========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div>
+
+        <img
+          src="factfinder-logo.jpg"
+          class="footer-logo"
+          alt="Fact Finder Research"
+        >
+
+        <p class="footer-description">
+          Research, data, policy, monitoring and evaluation,
+          consultancy, technology, professional training,
+          and clinical research capacity-building solutions
+          for evidence-informed decisions.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h4>
+          Explore
+        </h4>
+
+        <ul class="footer-links">
+
+          <li>
+            <a href="#about">About Us</a>
+          </li>
+
+          <li>
+            <a href="#services">Services</a>
+          </li>
+
+          <li>
+            <a href="#training">Professional Training</a>
+          </li>
+
+          <li>
+            <a href="#portal">Learning Portal</a>
+          </li>
+
+          <li>
+            <a href="#approach">Our Approach</a>
+          </li>
+
+          <li>
+            <a href="#insights">Insights</a>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <div>
+
+        <h4>
+          Contact
+        </h4>
+
+        <ul class="footer-links">
+
+          <li>
+            3rd Floor, Suite 302,
+            Alimex Plaza
+          </li>
+
+          <li>
+            Mombasa Road,
+            Nairobi, Kenya
+          </li>
+
+          <li>
+            +254 707 465 892
+          </li>
+
+          <li>
+            +254 107 465 892
+          </li>
+
+          <li>
+            factfinderke@gmail.com
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+
+    <div class="copyright">
+
+      <span>
+        © 2026 Fact Finder Research.
+        All rights reserved.
+      </span>
+
+      <span>
+        Better Data. Smarter Decisions. Greater Impact.
+      </span>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+<!-- ========================================================
+     WHATSAPP
+========================================================= -->
+
+<a
+  href="https://wa.me/254707465892"
+  class="whatsapp"
+  target="_blank"
+  aria-label="Contact Fact Finder on WhatsApp"
+>
+  ☎
+</a>
+
+
+<!-- ========================================================
+     CERTIFICATE MODAL
+========================================================= -->
+
+<div
+  class="modal"
+  id="certificateModal"
+>
+
+  <div class="certificate">
+
+    <small>
+      Fact Finder Research
+    </small>
+
+    <h2>
+      Certificate of Completion
+    </h2>
+
+    <p>
+      This certificate is presented to
+    </p>
+
+    <h3 id="certificateStudent">
+      Learner
+    </h3>
+
+    <p>
+      for successfully completing
+    </p>
+
+    <h3 id="certificateCourse">
+      Training Programme
+    </h3>
+
+    <p>
+      This certificate recognises completion of the
+      assigned learning requirements in the Fact Finder
+      Research Learning Management Portal.
+    </p>
+
+    <div class="certificate-number">
+      Certificate No:
+      <strong id="certificateNumber">
+        FFR-2026-000001
+      </strong>
+    </div>
+
+    <div class="modal-actions">
+
+      <button
+        class="button button-green"
+        onclick="window.print()"
+      >
+        Print / Save Certificate
+      </button>
+
+      <button
+        class="button close-modal"
+        onclick="closeCertificate()"
+      >
+        Close
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- ========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+  /* =========================
+     MOBILE NAVIGATION
+  ========================= */
+
+  function toggleMenu() {
+
+    const menu =
+      document.getElementById("navLinks");
+
+    menu.classList.toggle("active");
+
+  }
+
+
+  document
+    .querySelectorAll(".nav-links a")
+    .forEach(link => {
+
+      link.addEventListener("click", () => {
+
+        document
+          .getElementById("navLinks")
+          .classList
+          .remove("active");
+
+      });
+
+    });
+
+
+  /* =========================
+     DEMO LMS LOGIN
+  ========================= */
+
+  function loginPortal(event) {
+
+    event.preventDefault();
+
+    const email =
+      document.getElementById("loginEmail").value;
+
+    if (!email) {
+      return;
+    }
+
+    const dashboard =
+      document.getElementById("studentDashboard");
+
+    const name =
+      email
+        .split("@")[0]
+        .replace(/[._-]/g, " ");
+
+    const formattedName =
+      name
+        .split(" ")
+        .map(word =>
+          word.charAt(0).toUpperCase() +
+          word.slice(1)
+        )
+        .join(" ");
+
+    document.getElementById("studentName")
+      .textContent = formattedName || "Learner";
+
+    dashboard.classList.add("active");
+
+    dashboard.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+
+  }
+
+
+  /* =========================
+     LMS LOGOUT
+  ========================= */
+
+  function logoutPortal() {
+
+    document
+      .getElementById("studentDashboard")
+      .classList
+      .remove("active");
+
+    document
+      .getElementById("loginEmail")
+      .value = "";
+
+    document
+      .getElementById("loginPassword")
+      .value = "";
+
+  }
+
+
+  /* =========================
+     START TRAINING
+  ========================= */
+
+  function startTraining(course) {
+
+    alert(
+      "Opening training: " +
+      course +
+      "\n\nIn the production LMS this button will open the course player, learning materials, exercises, assessments, and progress tracking."
+    );
+
+  }
+
+
+  /* =========================
+     CERTIFICATE
+  ========================= */
+
+  function generateCertificate(course) {
+
+    const student =
+      document.getElementById("studentName")
+        .textContent || "Learner";
+
+    document
+      .getElementById("certificateStudent")
+      .textContent = student;
+
+    document
+      .getElementById("certificateCourse")
+      .textContent = course;
+
+    const certificateNumber =
+      "FFR-" +
+      new Date().getFullYear() +
+      "-" +
+      Math.floor(100000 + Math.random() * 900000);
+
+    document
+      .getElementById("certificateNumber")
+      .textContent = certificateNumber;
+
+    document
+      .getElementById("certificateModal")
+      .classList
+      .add("active");
+
+  }
+
+
+  function closeCertificate() {
+
+    document
+      .getElementById("certificateModal")
+      .classList
+      .remove("active");
+
+  }
+
+
+  /* =========================
+     CLOSE MODAL WHEN CLICKING
+     OUTSIDE CERTIFICATE
+  ========================= */
+
+  document
+    .getElementById("certificateModal")
+    .addEventListener("click", function(event) {
+
+      if (event.target === this) {
+        closeCertificate();
+      }
+
+    });
+
+
+</script>
+
+
+<!-- ========================================================
+     PRODUCTION LMS NOTES
+=========================================================
+
+The current HTML provides the user interface and a functional
+front-end demonstration.
+
+For production deployment, connect the portal to:
+
+1. SECURE USER AUTHENTICATION
+   - Student accounts
+   - Employee accounts
+   - Trainer accounts
+   - Administrator accounts
+   - Password reset
+   - Role-based access control
+
+2. DATABASE
+   Suggested entities:
+   - users
+   - organisations
+   - courses
+   - modules
+   - lessons
+   - exercises
+   - quizzes
+   - assignments
+   - enrolments
+   - progress
+   - due_dates
+   - notifications
+   - certificates
+   - audit_logs
+
+3. TRAINING MANAGEMENT
+   - Create courses
+   - Assign courses to individuals
+   - Assign courses to organisations
+   - Set due dates
+   - Track progress
+   - Track assessment scores
+   - Require passing grades
+   - Mark completion
+
+4. AUTOMATED NOTIFICATIONS
+   Example workflow:
+   - New training assigned
+   - Immediate notification
+   - 7-day reminder
+   - 3-day reminder
+   - 1-day reminder
+   - Overdue notification
+   - Completion notification
+
+5. CERTIFICATES
+   Production certificates should be generated server-side.
+   Each certificate should have:
+   - Learner name
+   - Course name
+   - Completion date
+   - Certificate number
+   - Organisation
+   - Training provider
+   - Verification URL / QR code
+   - Digital signature where applicable
+
+6. ADMINISTRATOR PORTAL
+   Administrators should be able to:
+   - Add/edit courses
+   - Upload training materials
+   - Create exercises
+   - Create quizzes
+   - Set pass marks
+   - Assign training
+   - Set deadlines
+   - Monitor completion
+   - Send notifications
+   - Generate reports
+   - Issue/revoke certificates
+
+7. ORGANISATION/CORPORATE PORTAL
+   CROs and pharmaceutical companies could have:
+   - Organisation accounts
+   - Employee rosters
+   - Bulk training assignments
+   - Training compliance dashboards
+   - Completion reports
+   - Certificate records
+   - Exportable reports
+
+8. SECURITY
+   Do not implement real passwords or authentication only
+   through front-end JavaScript. Production authentication
+   must be handled securely on a server/backend.
+
+========================================================= -->
+
+</body>
+</html>
